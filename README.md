@@ -64,14 +64,28 @@ brew help
 #パッケージリストをコピーする
 cp Brewfile ~/.Brewfile
 
-#パッケージをインストール 
+#パッケージをインストール
 brew bundle　--global
 
 #パッケージのインストール確認
 brew list
+```
 
-#補足：リストの更新
+補足
+```sh
+#リストの更新
 brew bundle dump --global --force
+
+#手動インストール CUIアプリ
+brew install git
+
+#手動インストール GUIアプリ
+brew install --cask visual-studio-code
+
+#手動インストール AppStoreアプリ
+#AppStoreへ事前ログインが必要
+brew install mas #mas-cli必須
+mas install 539883307 #LINE
 ```
 
 ### [VisualStudioCode](https://code.visualstudio.com/)
