@@ -2,7 +2,9 @@
 開発機セットアップガイド
 
 - SSH鍵作成
+- Gitの設定
 - Homebrewパッケージインストール
+- nvm設定
 - VisualStudioCodeの設定
 
 ## すぐに始める
@@ -86,6 +88,45 @@ brew install --cask visual-studio-code
 #AppStoreへ事前ログインが必要
 brew install mas #mas-cli必須
 mas install 539883307 #LINE
+```
+
+## [nvm](https://github.com/nvm-sh/nvm)
+> node.jsのバージョン マネージャー
+
+[nvm - Homebrew Formulae](https://formulae.brew.sh/formula/nvm)を参照
+
+初期設定
+```sh
+mkdir ~/.nvm
+
+vi ~/.zshrc
+#以下を入力-----
+#nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+  [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+#-------------
+
+#適用
+source ~/.zshrc
+```
+
+使い方
+```sh
+#インストール済み一覧
+nvm ls
+
+#インストール
+nvm install v18.12.1
+
+#インストール .nvmrc
+nvm install
+
+#バージョン切り替え
+nvm use v18.12.1
+
+#バージョン切り替え .nvmrc
+nvm use
 ```
 
 ### [VisualStudioCode](https://code.visualstudio.com/)
