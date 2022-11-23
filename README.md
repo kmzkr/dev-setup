@@ -129,6 +129,9 @@ nvm use v18.12.1
 nvm use
 ```
 
+参考
+- [NPMとpackage.jsonを概念的に理解する](https://qiita.com/righteous/items/e5448cb2e7e11ab7d477)
+
 ### [VisualStudioCode](https://code.visualstudio.com/)
 > 最新のWebおよびクラウドアプリケーションの構築とデバッグのために再定義され最適化されたコードエディタです。
 
