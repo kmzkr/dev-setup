@@ -4,6 +4,7 @@ tap "homebrew/core"
 brew "git"
 brew "mas"
 brew "nvm"
+brew "yarn"
 cask "google-chrome"
 cask "visual-studio-code"
 mas "GarageBand", id: 682658836
