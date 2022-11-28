@@ -135,4 +135,40 @@ nvm use
 ### [VisualStudioCode](https://code.visualstudio.com/)
 > 最新のWebおよびクラウドアプリケーションの構築とデバッグのために再定義され最適化されたコードエディタです。
 
-setting.json
+```sh
+#設定ファイル
+cp vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json 
+
+#拡張機能をインストール
+sh vscode/extentions.sh
+```
+
+
+補足：設定ファイル
+
+```sh
+#ユーザ設定
+cat $HOME/Library/Application\ Support/Code/User/settings.json 
+
+#ワークスペース設定
+cat <プロジェクトルート>/.vscode/settings.json
+
+#ユーザ設定をエクスポート
+cat $HOME/Library/Application\ Support/Code/User/settings.json > vscode/settings.json
+```
+
+補足：拡張機能設定ファイル
+
+```sh
+#ユーザ設定
+ls -al ~/.vscode/extensions
+
+#ワークスペース設定 recommendations
+cat <プロジェクトルート>/.vscode/extensions.json
+
+#インストール済みの拡張機能一覧
+code --list-extensions
+
+#インストール済みの拡張機能一覧をインストール用ファイルとしてエクスポート
+code --list-extensions | xargs -L 1 echo code --install-extension > vscode/extensions.sh
+```
