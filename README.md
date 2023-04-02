@@ -132,6 +132,78 @@ nvm use
 参考
 - [NPMとpackage.jsonを概念的に理解する](https://qiita.com/righteous/items/e5448cb2e7e11ab7d477)
 
+### Python
+以下のパッケージ
+- [pyenv](https://github.com/pyenv/pyenv): Pythonバージョン管理ツール
+- [pipenv](https://pipenv-ja.readthedocs.io/ja/translate-ja/): Pythonのパッケージマネジャー
+
+#### pyenv
+初期設定
+```
+vi ~/.zshrc
+#以下を入力-----
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+#-------------
+
+#適用
+source ~/.zshrc
+```
+
+使い方
+```
+#利用可能なすべてのバージョンのリストが表示
+pyenv install -l
+
+#Pythonインストール
+pyenv install 3.10.4
+
+#Pythonアンインストール
+pyenv uninstall 3.10.4
+
+#インストール済みのバージョン一覧
+pyenv versions
+
+#バージョン切り替え
+pyenv shell 3.10.4 #現在のシェル セッションのみを選択します
+pyenv local 3.10.4 #現在のディレクトリ (またはそのサブディレクトリ) にいるときはいつでも自動的に選択します
+pyenv global 3.10.4 #ユーザー アカウントに対してグローバルに選択します
+```
+
+#### pipenv
+使い方
+```
+#仮想環境の作成
+pipenv --python 3.6
+# pyenvを使用している場合は，環境に入っていないバージョンを指定したときにはpyenvと連動してPythonのインストールが自動的に行われる
+
+#パッケージインストール
+pipenv install numpy
+
+#開発パッケージインストール
+pipenv install --dev autopep8 flake8
+
+#pipfileからの環境再現
+pipenv install
+
+#pipfile.lockからの環境再現
+pipenv sync
+
+#requirements.txtからのインストール
+pipenv install -r ./requirements.txt
+
+#仮想環境へログイン
+pipenv shell
+
+#仮想環境の場所
+pipenv --venv
+
+#仮想環境の削除
+pipenv --rm
+```
+
 ### [VisualStudioCode](https://code.visualstudio.com/)
 > 最新のWebおよびクラウドアプリケーションの構築とデバッグのために再定義され最適化されたコードエディタです。
 

@@ -5,6 +5,8 @@ brew "git"
 brew "mas"
 brew "nvm"
 brew "yarn"
+brew "pyenv"
+brew "pipenv"
 cask "google-chrome"
 cask "visual-studio-code"
 mas "GarageBand", id: 682658836
