@@ -244,3 +244,17 @@ code --list-extensions
 #インストール済みの拡張機能一覧をインストール用ファイルとしてエクスポート
 code --list-extensions | xargs -L 1 echo code --install-extension > vscode/extensions.sh
 ```
+
+### [Docker](https://docs.docker.com/)
+Docker Desktopとしてインストールする。
+
+```sh
+# インストール
+brew install --cask docker
+
+# インストール確認
+docker -v
+
+# Docker Desktopを起動させないとdockerコマンドが通らないので注意
+open /Applications/Docker.app
+```
