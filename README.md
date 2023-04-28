@@ -71,6 +71,19 @@ brew bundle　--global
 
 #パッケージのインストール確認
 brew list
+
+#パッケージ情報を表示
+brew info
+
+#Homebrewの更新 インストールしたパッケージは更新されない
+brew update
+
+#更新可能なパッケージ一覧を表示
+brew outdated
+
+#インストールしたパッケージを更新
+brew upgrade
+brew upgrade git #パッケージ指定する場合
 ```
 
 補足
@@ -249,12 +262,12 @@ code --list-extensions | xargs -L 1 echo code --install-extension > vscode/exten
 Docker Desktopとしてインストールする。
 
 ```sh
-# インストール
+#インストール
 brew install --cask docker
 
-# インストール確認
+#インストール確認
 docker -v
 
-# Docker Desktopを起動させないとdockerコマンドが通らないので注意
+#DockerDesktopを起動させないとdockerコマンドが通らないので注意
 open /Applications/Docker.app
 ```
