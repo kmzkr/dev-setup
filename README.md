@@ -88,6 +88,9 @@ brew upgrade git #パッケージ指定する場合
 
 補足
 ```sh
+#リストの表示
+brew bundle dump --file=-
+
 #リストの更新
 brew bundle dump --global --force
 
